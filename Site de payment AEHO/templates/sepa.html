@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faire un Don - AEHO</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" href="/static/sepa.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Faire un don sécurisé (SEPA)</h1>
+    <form id="sepa-form">
+      <label for="name">Nom complet</label>
+      <input id="name" name="name" placeholder="Jean Dupont" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="jean@exemple.com" required />
+
+      <label for="iban-element">IBAN</label>
+      <div id="iban-element"></div>
+      <div id="mandate-text" class="hidden"></div>
+
+      <button type="submit" id="submit-button">Faire un don</button>
+      <div id="response"></div>
+    </form>
+  </div>
+
+  <script src="/static/sepa.js"></script>
+</body>
+</html>
