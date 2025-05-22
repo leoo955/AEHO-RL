@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faire un don - AEHO</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Faire un don à AEHO</h1>
+    <p>Chaque don compte, chaque geste change une vie.</p>
+  </header>
+
+  <main class="fade-in">
+    <section class="don-intro">
+      <h2>Pourquoi faire un don ?</h2>
+      <p>
+        Vos contributions permettent de financer des soins, de la nourriture, des vêtements,
+        et un hébergement pour les enfants les plus vulnérables d'Haïti.
+        Grâce à votre générosité, AEHO agit directement sur le terrain.
+      </p>
+      <p>
+        Vous pouvez choisir le montant librement, payer en toute sécurité avec carte bancaire ou PayPal, et contribuer à un avenir meilleur.
+      </p>
+    </section>
+
+    <section class="don-center">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1RRW8aEEvRRGwijxIzoajXPe"
+        publishable-key="pk_test_51RRW1PEEvRRGwijxSRwK08gJDz6jQ7wfg4Wguz3YvrXaxXYUKLuCRWJCFqUHkorvRBS6Pv3icALID3Vzp83UDrjJ007WbjMbe0"
+      ></stripe-buy-button>
+
+      
+    </section>
+
+<a href="/" class="don-button">← Retour à l'accueil</a>
+  </main>
+    
+    
+
+  <footer>
+    <p>&copy; 2025 AEHO - Tous droits réservés. Association des Enfants Handicapés et Orphelins d'Haïti.</p>
+  </footer>
+</body>
+</html>

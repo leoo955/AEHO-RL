@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade transition */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+}
+
+/* Main section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.don-button {
+  font-family: 'Ubuntu', sans-serif;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color:#0074d4 ;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin: 1rem auto;
+  display: block;
+  width: fit-content;
+}
+.don-button:hover {
+  background-color: #0a6ab9;
+}
+
+/* Stripe container */
+.don-stripe {
+  margin: 2rem auto;
+  max-width: 500px;
+}
+.don-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.don-intro h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.don-center {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.don-button.secondary {
+  background-color: #ffffff;
+  color: #0074d4;
+  border: 2px solid #0074d4;
+  margin-top: 0.5rem;
+}
+
+.don-button.secondary:hover {
+  background-color: #0074d4;
+  color: #ffffff;
+  border:2px solid #ffffff;
+}
+
+.don-center stripe-buy-button {
+  display: block !important;  /* forcer bloc */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 320px; /* limite la taille max */
+  width: 100%; /* prend toute la largeur possible */
+}
+
+/* Footer */
+footer {
+  background-color: #eaeaea;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
