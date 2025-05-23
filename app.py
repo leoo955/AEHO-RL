@@ -29,8 +29,8 @@ def index():
 @app.route("/don")
 def don():
     return render_template("payment.html")
-
-@app.route("/sepa")
+#                                                                     <-------------------- DONT WORK-------------------->
+@app.route("/sepa") # dont work
 def sepa():
     return render_template("sepa.html")
 
@@ -57,7 +57,7 @@ def create_setup_intent():
         return jsonify({"clientSecret": intent.client_secret})
     except Exception as e:
         return jsonify(error=str(e)), 403
-
+#                                                                     <--------------------WORK-------------------->
 if __name__ == "__main__":
    threading.Thread(target=keep_alive).start()
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
