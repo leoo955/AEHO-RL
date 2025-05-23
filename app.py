@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from dotenv import load_dotenv
+import threading
+import requests
+import time 
 import stripe
 import os
 
@@ -11,6 +14,14 @@ app = Flask(__name__)
 # Clé secrète Stripe (depuis .env)
 stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
+def keep_alive():
+    while True:
+        try:
+            requests.get("https://aeho-rl.onrender.com")
+        except requests.exceptions.RequestException as e:
+            print(f"Erreur de connexion : {e}")
+        time.sleep(30) 
+        
 @app.route("/")
 def index():
     return render_template("index.html")
