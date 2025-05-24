@@ -15,6 +15,7 @@ stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 @app.route('/')
 def index():
     return send_from_directory('public', 'index.html')
+    
 @app.route("/don")
 def don():
     return render_template("payment.html")
