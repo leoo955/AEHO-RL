@@ -15,6 +15,13 @@ stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 @app.route('/')
 def index():
     return send_from_directory('public', 'index.html')
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory('public', 'robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap_xml():
+    return send_from_directory('public', 'sitemap.xml')
     
 @app.route("/don")
 def don():
