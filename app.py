@@ -17,11 +17,11 @@ def index():
     return send_from_directory('public', 'index.html')
 @app.route('/robots.txt')
 def robots_txt():
-    return send_from_directory('.', 'robots.txt')
+    return send_from_directory('public', 'robots.txt')
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory('static', 'sitemap.xml')
+    return send_from_directory('public', 'sitemap.xml')
     
 @app.route('/google0c627cc1f164193b.html')
 def google_verification():
