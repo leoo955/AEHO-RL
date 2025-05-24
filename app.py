@@ -22,10 +22,7 @@ def robots_txt():
 @app.route('/sitemap.xml')
 def sitemap_xml():
     return send_from_directory('public', 'sitemap.xml')
-    @app.route('/google0c627cc1f164193b.html')
-def google_verification():
-    return send_from_directory('public', 'google0c627cc1f164193b.html')
-
+    
 app.route('/google0c627cc1f164193b.html')
 def google_verification():
     return send_from_directory('public', 'google0c627cc1f164193b.html')
