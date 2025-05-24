@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+from flask import send_from_directory
 from dotenv import load_dotenv
 import stripe
 import os
@@ -11,10 +12,9 @@ app = Flask(__name__)
 # Clé secrète Stripe (depuis .env)
 stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
-@app.route("/")
+@app.route('/')
 def index():
-    return render_template("index.html")
-
+    return send_from_directory('public', 'index.html')
 @app.route("/don")
 def don():
     return render_template("payment.html")
